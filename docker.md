@@ -55,7 +55,13 @@ app,libs,middleware,os,nw,etc
 
 - docker cotainer run ubuntu:latest  /bin/echo 'Hello world'
 
+- docker ps - 현재 실행중인 container 
 
+- docker system df - image , container 상태들을 알려준다
 
+- docker container run --name webserver -d -p 80 :80 nginx 
+ - 이름은 webserver 로 -d (background명령 배경으로 돔) -p(port) 80(1) 내 pc포트 80(2) nginx 의 포트 
+
+-
 
 
