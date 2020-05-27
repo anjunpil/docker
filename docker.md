@@ -62,6 +62,44 @@ app,libs,middleware,os,nw,etc
 - docker container run --name webserver -d -p 80 :80 nginx 
  - 이름은 webserver 로 -d (background명령 배경으로 돔) -p(port) 80(1) 내 pc포트 80(2) nginx 의 포트 
 
--
+-docker container rm webserver(이름) - container 삭제
 
+- docker search ubuntu : ubuntu 찾기 ( star 가 많은것들 인기도가 높다)
 
+- docker container run -it --name "test1" centos /bin/cal
+ - i 는 input()  t는 tty standardout() - interactive한 대화형으로 받을 수 있다
+ - centos 는 image 이름으로 실행 시킴
+ - /bin/cal로 실행시켜라 (callender가 생성됨) bin은 기본명령
+
+-docker container run -it --name "cosh" centos bash
+ - linux를 실행시킴
+ - whoami , exit, ls -al
+
+- docker container run -it --name "ubuntush" ubuntu bash
+ - ubuntu 실행
+ - 종료 exit or ctrl p+q
+ 
+ - run 실행시키기
+ - -d(detach) 밖으로 나오기 (ctrl+ p,q) 하지만 container는 계속 작동중
+ - exit() 는 완전히 container를 종료하고 나온다
+ 
+ - attach - 현재 실행중인 container에 들어가는 것
+ - stop  - container 죽이기
+ 
+ - docker container exec - it ubuntush cat /etc/hosts
+  - ubuntu container 안에 하나의 명령 cat /etc/hosts 만 실행해라
+  
+ - docker container port ubuntush
+ - docker containrt rename ubuntush ub
+  - 이름 변경
+ 
+- docker container cp container-name: path client-path
+ - container file을 줄 수 있다
+- docker container cp container-name: path client-path
+ - 내 파일을 container 에 줄 수 있다
+  
+- share directory(중요)
+ - docker run -v localpath : container-path
+ 
+ - docker stop `docker ps -q`
+- docker ps -q 실행중인 container 의 ID를 달라
