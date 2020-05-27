@@ -103,3 +103,48 @@ app,libs,middleware,os,nw,etc
  
  - docker stop `docker ps -q`
 - docker ps -q 실행중인 container 의 ID를 달라
+
+## docker - oracle ,Mysql
+
+### oracle
+<br>
+#### 명령
+
+- docker pull christophesurmont/oracle-xe-11g  - oracle image다운
+
+- docker run -d -p 8080:8080 -p 1521:1521 christophesurmont/oracle-xe-11g
+ - database 자체의 port  
+
+- docker exec -it oracle bash
+ -lsnrctl를 입력해서
+ - oracle 서버로 들어간다
+ 
+### mysql
+<br>
+#### 명령
+- docker pull mysql:5.7
+ - mysql 설치
+ - 
+
+- docker run -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root1! --name mysql5 mysql:5.7
+ - -e 환경변수 MYSQL_ROOT_PASSWORD =root1!(비밀번호 설정)
+ - 띄어쓰기 주의
+ - mysql:5.7 (mysql 에 태그도 입력해줘야한다 안그럼 오류남)
+ 
+ - docker exec -it mysql5 bash
+  - mysql bash로 들어가기
+  - which mysql - mysql -위치알아보기
+  - mysql -u root -p  - 비밀번호를 치고 들어가면 mysql로 들어갈 수 있음
+  - show databese; - database들을 보여줌
+  - use mysql - mysql을 사용하겠다
+  - show tables;
+  - select * from user;
+  - select host,user from user;
+  - quit - 종료
+  
+
+  
+  
+  
+  
+  
