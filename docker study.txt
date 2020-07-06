@@ -1,0 +1,24 @@
+docker  - single container 에 대한 명령을 수행하는 client
+
+docker-compose yaml file을 기반으로 multi container를 관리할 수 있는 client
+
+COPY - 파일을 복사하는 명령어
+RUN - 실행하는 명령어 ,RUN 명령은 image layer를 만들어냄
+ADD - 파일을 이미지에 추가
+ex)
+- ADD hello-entrypoint.sh /entrypoint.sh
+- ADD hello-dir /hello-dir
+- ADD zlib-1.2.8.tar.gz /
+- ADD hello.zip /
+- ADD http://example.com/hello.txt /hello.txt
+- ADD *.txt /root/
+
+밑에 5개는 모두 같은 image를 가리킴
+
+- nginx:latest
+- nginx@sha256:50cf965a6e08ec5784009d0fccb380fc479826b6e0e65684d9879170a9df8566
+- library/nginx:latest
+- docker.io/library/nginx:latest
+- index.docker.io/library/nginx:latest
+
+
