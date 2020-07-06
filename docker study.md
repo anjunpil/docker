@@ -10,7 +10,7 @@
 - ADD hello-dir /hello-dir
 - ADD zlib-1.2.8.tar.gz /
 - ADD hello.zip /
-- ADD http://example.com/hello.txt /hello.txt
+- ADD `http://example.com/hello.txt` /hello.txt
 - ADD *.txt /root/
 
 밑에 5개는 모두 같은 image를 가리킴
